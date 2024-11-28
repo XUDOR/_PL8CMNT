@@ -39,8 +39,8 @@ body {
 }
 
 .nav1 {
-  margin-top: 5px;
-  
+  margin-top: 9px;
+
   padding: 5px;
   border-right: 1px solid gray;
   align-items: center;
@@ -49,12 +49,14 @@ body {
 
 .nav2 {
   padding: 4px;
+  
   margin-left: 1px;
   display: flex;
   flex-direction: column;
   padding: 5px;
 
 }
+
 .nav-link-UP,
 .footer-link {
   box-sizing: border-box;
@@ -72,12 +74,14 @@ body {
   text-decoration: none;
   color: #333;
   font-size: 1rem;
-  border-bottom: 2px solid transparent; /* Add a transparent border */
+  border-bottom: 2px solid transparent;
+  /* Add a transparent border */
 }
 
 /* Hover state */
 .nav-link-UP:hover {
-  border-bottom: 2px solid #2c3e50; /* Change border color */
+  border-bottom: 2px solid #2c3e50;
+  /* Change border color */
 }
 
 .nav-link-CI:hover {
@@ -135,7 +139,8 @@ body {
   text-decoration: none;
   color: #333;
   font-size: 0.9rem;
-  border-bottom: 2px solid transparent; /* Prevent layout shift */
+  border-bottom: 2px solid transparent;
+  /* Prevent layout shift */
 }
 
 .footer-link:hover {
@@ -165,15 +170,21 @@ body {
 }
 
 
-  /* Responsive for Mobile */
+/* Responsive for Mobile */
 @media (max-width: 768px) {
+
   /* Center the header content */
   .header {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align logo and nav */
-    justify-content: center; /* Center all content */
-    text-align: center; /* Ensure text is centered */
-    padding: 1rem; /* Adjust padding for consistency */
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: center;
+    /* Center-align logo and nav */
+    justify-content: center;
+    /* Center all content */
+    text-align: center;
+    /* Ensure text is centered */
+    padding: 1rem;
+    /* Adjust padding for consistency */
   }
 
   /* Center the logo */
@@ -181,24 +192,34 @@ body {
     font-size: 3rem;
     font-weight: bold;
     color: #707069;
-    margin-bottom: 1rem; /* Add space below the logo */
-    align-self: center; /* Explicitly center within flex container */
+    margin-bottom: 1rem;
+    /* Add space below the logo */
+    align-self: center;
+    /* Explicitly center within flex container */
   }
 
   /* Clean up and center navigation */
   .nav {
-    flex-direction: column; /* Stack navigation vertically */
-    align-items: center; /* Center-align navigation */
-    gap: 1rem; /* Add spacing between nav items */
+    flex-direction: column;
+    /* Stack navigation vertically */
+    align-items: center;
+    /* Center-align navigation */
+    gap: 1rem;
+    /* Add spacing between nav items */
   }
 
   .nav1,
   .nav2 {
-    flex-direction: row; /* Keep links inline */
-    justify-content: center; /* Center-align content */
-    padding: 0; /* Remove extra padding */
-    margin: 0; /* Reset margins */
-    border: none; /* Remove borders */
+    flex-direction: row;
+    /* Keep links inline */
+    justify-content: center;
+    /* Center-align content */
+    padding: 0;
+    /* Remove extra padding */
+    margin: 0;
+    /* Reset margins */
+    border: none;
+    /* Remove borders */
   }
 
   /* Adjust navigation links */
@@ -206,22 +227,26 @@ body {
   .nav-link-CI,
   .nav-link-MC,
   .nav-link-CT {
-    font-size: 1.2rem; /* Slightly larger for better readability */
-    padding: 5px 10px; /* Adjust padding for a cleaner look */
-    margin: 0; /* Reset margins for uniformity */
-    border: none; /* Remove border-right */
+    font-size: 1.2rem;
+    /* Slightly larger for better readability */
+    padding: 5px 10px;
+    /* Adjust padding for a cleaner look */
+    margin: 0;
+    /* Reset margins for uniformity */
+    border: none;
+    /* Remove border-right */
   }
-  
-  .nav-link-UP{
+
+  .nav-link-UP {
     color: #2c3e50
   }
-  .nav-link-CI{
+
+  .nav-link-CI {
     color: #86B700
   }
 
-  .nav-link-MC{
+  .nav-link-MC {
     color: #F2CB0A
   }
 
 }
-

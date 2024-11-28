@@ -113,3 +113,25 @@ body {
   color: #333;
   font-size: 0.9rem;
 }
+
+/* Responsive Footer for Mobile */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text for links */
+    padding: 1.5rem 1rem; /* Slightly increased padding for better spacing */
+  }
+
+  .footer-links,
+  .footer-auth {
+    flex-direction: row; /* Stack links vertically */
+    gap: 0.8rem; /* Maintain spacing */
+  }
+
+  .footer-link {
+    font-size: 1rem; /* Ensure readability on small screens */
+  }
+}
+
+

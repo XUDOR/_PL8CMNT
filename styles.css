@@ -12,7 +12,8 @@ body {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the body fills the viewport height */
+  min-height: 100vh;
+  /* Ensures the body fills the viewport height */
 }
 
 /* Header */
@@ -38,11 +39,12 @@ body {
 }
 
 .nav1 {
+  margin-top: 5px;
   padding: 5px;
   border-right: 1px solid gray;
+  align-items: center;
+
 }
-
-
 
 .nav2 {
   display: flex;
@@ -50,18 +52,50 @@ body {
   padding: 5px;
 
 }
+.nav-link-UP,
+.footer-link {
+  box-sizing: border-box;
+}
 
-.nav-link {
+
+
+/* Default state */
+.nav-link-UP,
+.nav-link-CI,
+.nav-link-MC,
+.nav-link-CT {
+  padding: 7px;
+  margin: 3px;
   text-decoration: none;
   color: #333;
   font-size: 1rem;
+  border-bottom: 2px solid transparent; /* Add a transparent border */
+  transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
+/* Hover state */
+.nav-link-UP:hover {
+  border-bottom: 2px solid #2c3e50; /* Change border color */
+}
+
+.nav-link-CI:hover {
+  border-bottom: 2px solid #86B700;
+}
+
+.nav-link-MC:hover {
+  border-bottom: 2px solid #F2CB0A;
+}
+
+
+
 
 /* Main Content */
 .main {
-  flex: 1; /* Makes the main section grow to fill space between header and footer */
+  flex: 1;
+  /* Makes the main section grow to fill space between header and footer */
   display: grid;
-  grid-template-columns: 1fr; /* Default: 1 column for small screens */
+  grid-template-columns: 1fr;
+  /* Default: 1 column for small screens */
   gap: 1rem;
   padding: 2rem;
 }
@@ -72,34 +106,21 @@ body {
   font-weight: bold;
 }
 
-/* Responsive Grid */
-@media (min-width: 768px) {
-  .main {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
-  }
-}
-
-@media (min-width: 1024px) {
-  .main {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
-  }
-}
-
-@media (min-width: 1440px) {
-  .main {
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for extra-large screens */
-  }
-}
 
 /* Footer */
 .footer {
+  padding: 5px;
   display: flex;
+  position: relative;
   justify-content: space-between;
+  gap: 5px;
   align-items: center;
   padding: 1rem 2rem;
+  padding-bottom: 3em;
   border-top: 2px solid #ddd;
   background-color: #fff;
-  flex-shrink: 0; /* Ensures the footer stays at the bottom */
+  flex-shrink: 0;
+  /* Ensures the footer stays at the bottom */
 }
 
 .footer-links,
@@ -112,26 +133,107 @@ body {
   text-decoration: none;
   color: #333;
   font-size: 0.9rem;
+  border-bottom: 2px solid transparent; /* Prevent layout shift */
+  transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Responsive Footer for Mobile */
+.footer-link:hover {
+  border-bottom: 2px solid #A32E0A;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns for medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns for large screens */
+  }
+}
+
+@media (min-width: 1440px) {
+  .main {
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns for extra-large screens */
+  }
+}
+
+
+/* Responsive for Mobile */
 @media (max-width: 768px) {
+
+
+  .logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #707069;
+    align-items: center;
+  }
+
   .footer {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
-    text-align: center; /* Center text for links */
-    padding: 1.5rem 1rem; /* Slightly increased padding for better spacing */
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center items */
+    text-align: center;
+    /* Center text for links */
+    padding: 1.5rem 1rem;
+    /* Slightly increased padding for better spacing */
   }
 
   .footer-links,
   .footer-auth {
-    flex-direction: row; /* Stack links vertically */
-    gap: 0.8rem; /* Maintain spacing */
+    flex-direction: row;
+    /* Stack links vertically */
+    gap: 0.8rem;
+    /* Maintain spacing */
   }
 
   .footer-link {
-    font-size: 1rem; /* Ensure readability on small screens */
+    font-size: 1rem;
+    /* Ensure readability on small screens */
+  }
+
+  .nav-link-UP {
+    padding: 7px;
+    margin: 3px;
+    text-decoration: none;
+    color: #333;
+    border-right: 1px solid gray;
+    font-size: 1.3rem;
+  }
+
+  .nav-link-CI {
+    padding: 7px;
+    margin: 3px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.3rem;
+  }
+
+  .nav-link-MC {
+    padding: 7px;
+    margin: 3px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+  }
+
+  .nav-link-CT {
+    padding: 7px;
+    margin: 3px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+  }
+
+  .nav2 {
+    flex-direction: row;
+
   }
 }
-
-

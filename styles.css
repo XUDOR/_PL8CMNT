@@ -259,6 +259,12 @@ body {
     color: #E0431E
   }
 
-  
+  .nav-link-CI {
+    color: #86B700
+  }
+
+  .nav-link-MC {
+    color: #F2CB0A
+  }
 
 }

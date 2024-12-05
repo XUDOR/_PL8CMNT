@@ -206,9 +206,10 @@ body {
 
   /* Center the logo */
   .logo {
+    font-family: 'Baskerville', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 3rem;
-    font-weight: bold;
-    color: #707069;
+    font-weight: lighter;
+    color: #79A31C;
     margin-bottom: 1rem;
     /* Add space below the logo */
     align-self: center;
@@ -254,16 +255,10 @@ body {
     /* Remove border-right */
   }
 
-  .nav-link-UP {
-    color: #2c3e50
+  .nav-link {
+    color: #E0431E
   }
 
-  .nav-link-CI {
-    color: #86B700
-  }
-
-  .nav-link-MC {
-    color: #F2CB0A
-  }
+  
 
 }

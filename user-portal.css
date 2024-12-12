@@ -1,0 +1,124 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #20232A;
+  color: #FFFFFA;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+header {
+  background-color: #2c3e50;
+  color: #0AAAC3;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  background-color: #0F1D38;
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: #C1E0E0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  border-bottom: 2px solid #8BA4A5;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-item {
+  background-color: #444340;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: bold;
+  color: #0AAAC3;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  border: 1px solid #4F8FBA;
+  background-color: #20232A;
+  color: #FFFFFA;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #0AAAC3;
+  color: #20232A;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #098997;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2c3e50;
+  color: #4F8FBA;
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto;
+}

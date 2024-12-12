@@ -1,29 +1,36 @@
-/* company-io.css */
-
-/* Main Content */
-main {
-  flex: 1;
-  padding: 2rem;
-}
-
 /* Grid Layout */
 .grid-container {
   display: grid;
   gap: 2rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* Default for mobile */
+  margin-bottom: 2rem;
 }
 
-/* Responsive Grid */
+/* Responsive Layout for Tablets */
 @media (min-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Responsive Layout for Desktop */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+  }
+}
+
 .grid-item {
-  background-color: #3A3A3A;
+  background-color: #444340;
   padding: 1.5rem;
   border-radius: 5px;
+  min-height: 200px;
+}
+
+/* Section Headings */
+.grid-item h2 {
+  color: #C6D000;
+  margin-bottom: 1rem;
 }
 
 /* Form Styles */
@@ -35,31 +42,78 @@ form {
 
 form label {
   font-weight: bold;
-  color: #FFAA00;
+  color: #C6D000;
 }
 
 form input,
 form textarea,
 form button {
   padding: 0.5rem;
-  border: 1px solid #FFAA00;
-  background-color: #2C2C2C;
-  color: #FFFFFF;
   border-radius: 5px;
+  border: 1px solid #868C07;
+  background-color: #20232A;
+  color: #FFFFFA;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #A0A0A0;
 }
 
 form button {
-  background-color: #FFAA00;
-  color: #2C2C2C;
+  border: 2px solid #86B700;
+  background-color: transparent;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 form button:hover {
-  background-color: #E09400;
+  background-color: #86B700;
+  color: #20232A;
 }
 
-/* Applications List */
-.grid-item p {
-  color: #C1E0E0;
+/* Response Message */
+#form-response {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #C6D000;
+}
+
+/* Talent and Match Lists */
+.talent-list,
+.match-list {
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 5px;
+  color: #FFF;
+}
+
+/* Footer Styles (from shared.css) */
+.footer {
+  background-color: #14467A;
+  color: #FFFFFD;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #ddd;
+  margin-top: auto;
+}
+
+.footer-links,
+.footer-auth {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #FFFFFD;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
+}
+
+.footer-link:hover {
+  border-bottom: 2px solid #E0431E;
 }

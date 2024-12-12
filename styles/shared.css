@@ -34,6 +34,7 @@ body {
   font-family: 'Baskerville', 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   font-size: 3rem;
   font-weight: lighter;
+  text-decoration: none;
   color: #79A31C;
 }
 
@@ -100,7 +101,7 @@ body {
   color: #1C0202;
 }
 
-/* Footer */
+/* Footer Styles */
 .footer {
   background-color: #14467A;
   color: #FFFFFD;
@@ -129,6 +130,7 @@ body {
 .footer-link:hover {
   border-bottom: 2px solid #E0431E;
 }
+
 
 /* Responsive Grid */
 @media (min-width: 768px) {

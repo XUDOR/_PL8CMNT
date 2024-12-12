@@ -1,0 +1,74 @@
+/* user-portal.css */
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid-item {
+  background-color: #444340;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  font-weight: bold;
+  color: #0AAAC3;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  border: 1px solid #4F8FBA;
+  background-color: #20232A;
+  color: #FFFFFA;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #0AAAC3;
+  color: #20232A;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #098997;
+}
+
+/* Notifications and Applications Lists */
+.application-list,
+.notification-list {
+  background-color: #333;
+  padding: 1rem;
+  border-radius: 5px;
+  color: #FFF;
+}

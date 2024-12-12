@@ -95,7 +95,9 @@ body {
   border-bottom: 2px solid #E0431E;
 }
 
-
+.nav-link-CT:hover {
+  border-bottom: 2px solid #E0431E;
+}
 
 
 /* Main Content */

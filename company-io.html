@@ -8,53 +8,80 @@
     <link rel="stylesheet" href="styles/company-io.css">
 </head>
 <body>
-    <!-- Consistent Header with Logo and Navigation -->
-    <header class="header">
-      <div class="logo">The Job Placement App</div>
-      <nav class="nav">
-        <div class="nav1">
-          <a href="user-portal.html" class="nav-link-UP">User Portal</a>
-          <a href="company-io.html" class="nav-link-CI">Company IO</a>
-        </div>
-        <div class="nav2">
-          <a href="metrics-console.html" class="nav-link-MC">Metrics Console</a>
-          <a href="conversion-tool.html" class="nav-link-CT">Conversion Tool</a>
-        </div>
-      </nav>
-    </header>
 
-    <main>
-        <div class="grid-container">
-            <div class="grid-item">
-                <h2>Post a Job</h2>
-                <form id="job-form">
-                    <label for="job-title">Job Title:</label>
-                    <input type="text" id="job-title" placeholder="Enter job title">
+<header class="header">
+  <a href="index.html" class="logo">The Job Placement App</a>
+  <nav class="nav">
+    <div class="nav1">
+      <a href="user-portal.html" class="nav-link-UP">User Portal</a>
+      <a href="company-io.html" class="nav-link-CI">Company IO</a>
+    </div>
+    <div class="nav2">
+      <a href="metrics-console.html" class="nav-link-MC">Metrics Console</a>
+      <a href="conversion-tool.html" class="nav-link-CT">Conversion Tool</a>
+    </div>
+  </nav>
+</header>
 
-                    <label for="company-name">Company Name:</label>
-                    <input type="text" id="company-name" placeholder="Enter company name">
+<main>
+  <div class="grid-container">
+    <!-- Job Posting Section -->
+    <div class="grid-item">
+      <h2>Job Posting</h2>
+      <form id="opportunity-form">
+        <label for="job_title">Job Title:</label>
+        <input type="text" id="job_title" name="job_title" placeholder="Enter job title" required>
 
-                    <label for="location">Location:</label>
-                    <input type="text" id="location" placeholder="Enter job location">
+        <label for="company_name">Company Name:</label>
+        <input type="text" id="company_name" name="company_name" placeholder="Enter company name" required>
 
-                    <label for="description">Job Description:</label>
-                    <textarea id="description" placeholder="Enter job description"></textarea>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter job location">
 
-                    <button type="submit">Post Job</button>
-                </form>
-            </div>
+        <label for="skills_required">Skills Required (comma-separated):</label>
+        <input type="text" id="skills_required" name="skills_required" placeholder="e.g., JavaScript, Python">
 
-            <div class="grid-item">
-                <h2>Manage Applications</h2>
-                <p>No applications yet.</p>
-            </div>
-        </div>
-    </main>
+        <label for="job_description">Job Description:</label>
+        <textarea id="job_description" name="job_description" rows="4" placeholder="Enter job description"></textarea>
 
-    <footer>
-        <p>&copy; 2024 Company IO. All rights reserved.</p>
-    </footer>
+        <button type="submit">Submit Job</button>
+      </form>
+      <div id="form-response"></div>
+    </div>
 
-    <script src="main.js"></script>
+    <!-- Talent Section -->
+    <div class="grid-item">
+      <h2>Talent</h2>
+      <p>Discover top talent ready for your company.</p>
+      <div class="talent-list">
+        <p>No talent profiles available yet.</p>
+      </div>
+    </div>
+
+    <!-- Match | Sort Section -->
+    <div class="grid-item">
+      <h2>Match | Sort</h2>
+      <p>Match and sort job listings with talent profiles.</p>
+      <div class="match-list">
+        <p>No matches available yet.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="#" class="footer-link">Contact</a>
+    <a href="#" class="footer-link">Stats</a>
+    <a href="#" class="footer-link">API</a>
+    <a href="#" class="footer-link">Legal</a>
+  </div>
+  <div class="footer-auth">
+    <a href="#" class="footer-link">Authentication</a>
+  </div>
+</footer>
+
+
+<script src="main.js"></script>
 </body>
 </html>
